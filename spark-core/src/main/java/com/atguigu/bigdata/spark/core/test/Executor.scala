@@ -25,11 +25,11 @@ object Executor {
     val objIn = new ObjectInputStream(in)
 
     //    val i: Int = in.read()
-    val task: Task = objIn.readObject().asInstanceOf[Task]
+    val task: SubTask = objIn.readObject().asInstanceOf[SubTask]
     val ints: List[Int] = task.compute()
 
     //    println("接收到客户端发送的数据：" + i)
-    println("计算节点计算的结果为：" + ints)
+    println("计算节点[9999]计算的结果为：" + ints)
 //    in.close()
     objIn.close()
     client.close()
